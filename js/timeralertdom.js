@@ -3,7 +3,7 @@
  */
 var TimerDom = (function () {
 	"use strict";
-	/*global jQuery: true, TimeC: true*/
+	/*global jQuery: true, TimeC: true, colorToHex: true*/
 	var ids = {},
 		startTimer = null,
 		stopTimer = null,
@@ -14,7 +14,7 @@ var TimerDom = (function () {
 		hideClockName = "Hide clock",
 		showSettingsName = "Show settings",
 		hideSettingsName = "Hide settings";
-	
+
 	/**
 	 * List of ids used for timer management
 	 */
@@ -35,9 +35,9 @@ var TimerDom = (function () {
 		var $settingsBlock = null,
 			newValue = showSettingsName,
 			currentDisplayStatus = "none";
-		
+
 		$settingsBlock = jQuery('#' + ids.management);
-		
+
 		if (toggleFlag === undefined || toggleFlag === null) {
 			currentDisplayStatus = $settingsBlock.css("display");
 			toggleFlag = false;
@@ -45,7 +45,7 @@ var TimerDom = (function () {
 				toggleFlag = true;
 			}
 		}
-		
+
 		if (toggleFlag === true) {
 			newValue = hideSettingsName;
 		}
@@ -104,6 +104,72 @@ var TimerDom = (function () {
 		});
 	};
 	/**
+	 * Set text color
+	 */
+	function textColor() {
+		jQuery("#textColor").ColorPicker({
+			onShow: function (colpkr) {
+				jQuery(colpkr).fadeIn(500);
+				return false;
+			},
+			onHide: function (colpkr) {
+				jQuery(colpkr).fadeOut(500);
+				return false;
+			},
+			onSubmit: function (hsb, hex, rgb, el) {
+				jQuery(el).ColorPickerHide();
+				jQuery('#textColor div').css('backgroundColor', '#' + hex);
+				TimeC.setTextColor(hex);
+				TimeC.setTimerTextColor(hex);
+			},
+			onBeforeShow: function () {
+				var useColor = jQuery('#textColor div').css('backgroundColor');
+				jQuery(this).ColorPickerSetColor(colorToHex(useColor));
+			}
+		});
+	}
+	/**
+	 * Set background color
+	 */
+	function backgroundColor() {
+		jQuery('#backgroundColor').ColorPicker({
+			onShow: function (colpkr) {
+				jQuery(colpkr).fadeIn(500);
+				return false;
+			},
+			onHide: function (colpkr) {
+				jQuery(colpkr).fadeOut(500);
+				return false;
+			},
+			onSubmit: function (hsb, hex, rgb, el) {
+				jQuery(el).ColorPickerHide();
+				jQuery('#backgroundColor div').css('backgroundColor', '#' + hex);
+				jQuery('body').css('backgroundColor', '#' + hex);
+			},
+			onBeforeShow: function () {
+				var useColor = jQuery('#backgroundColor div').css('backgroundColor');
+				jQuery(this).ColorPickerSetColor(colorToHex(useColor));
+			}
+		});
+	}
+	/**
+	 * Switch colors
+	 */
+	function switchColors() {
+		jQuery("#switchColors").click(function () {
+			var textColor = colorToHex(jQuery('#textColor div').css('backgroundColor')),
+				backgroundColor = colorToHex(jQuery('#backgroundColor div').css('backgroundColor'));
+
+			jQuery('#textColor div').css('backgroundColor', backgroundColor);
+			TimeC.setTextColor(backgroundColor);
+			TimeC.setTimerTextColor(backgroundColor);
+
+			jQuery('#backgroundColor div').css('backgroundColor', textColor);
+			jQuery('body').css('backgroundColor', textColor);
+		});
+	}
+
+	/**
 	 * Attach events
 	 */
 	attachEvents = function () {
@@ -111,8 +177,11 @@ var TimerDom = (function () {
 		stopTimer();
 		showHideManagement();
 		toggleClock();
+		textColor();
+		backgroundColor();
+		switchColors();
 	};
-	
+
 	return {
 		attachEvents: attachEvents,
 		showSettings: showSettings,
