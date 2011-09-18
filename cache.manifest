@@ -1,0 +1,48 @@
+CACHE MANIFEST
+# rev 1
+CACHE:
+# CSS
+css/app.css
+css/colorpicker.css
+# JS
+js/app.js
+js/colorpicker.js
+js/timeralert.js
+js/timeralertdom.js
+https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js
+# MEDIA
+media/alarm-clock-1.mp3
+media/alarm-clock-1.wav
+media/alarm-clock-1.wma
+# IMAGES
+images/blank.gif
+images/colorpicker_background.png
+images/colorpicker_hex.png
+images/colorpicker_hsb_b.png
+images/colorpicker_hsb_h.png
+images/colorpicker_hsb_s.png
+images/colorpicker_indic.gif
+images/colorpicker_overlay.png
+images/colorpicker_rgb_b.png
+images/colorpicker_rgb_g.png
+images/colorpicker_rgb_r.png
+images/colorpicker_select.gif
+images/colorpicker_submit.png
+images/custom_background.png
+images/custom_hex.png
+images/custom_hsb_b.png
+images/custom_hsb_h.png
+images/custom_hsb_s.png
+images/custom_indic.gif
+images/custom_rgb_b.png
+images/custom_rgb_g.png
+images/custom_rgb_r.png
+images/custom_submit.png
+images/select.png
+images/select2.png
+images/slider.png
+# HTML
+index.html
+NETWORK:
+*
