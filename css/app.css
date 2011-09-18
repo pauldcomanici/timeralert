@@ -1,0 +1,19 @@
+body { margin: 20px 10px 0px 10px;font-family: "Droid Sans Mono, sans-serif";}
+.clock {margin: 0 auto; text-align:center;}
+.management {height: 70px;margin-bottom:10px;border:1px solid #EFEFEF;padding: 5px;background:#FFF;}
+.clear {clear:both;}
+.spacer {line-height:0px;font-size:0px;float:left;width:1px;height:1px;}
+.pickColor {position: relative;width: 36px;height: 36px;background: url(../images/select.png); cursor:pointer;}
+.pickColor div {position: absolute;top: 3px;left: 3px;width: 30px;height: 30px;background: url(../images/select.png) center;}
+.management label {float:left;margin-right:3px;line-height:26px;}
+.management .pickColorLabel {line-height:36px;float:left;margin-right:3px;}
+.management .pickColor {line-height:36px;float:left;margin-right:10px;}
+.management .pickColor div{background-color:#000000;}
+.management .pickBackgroundColor div{background-color:#FFFFFF;}
+.management .time_field {float:left;margin-right:10px;line-height:18px;height:20px;}
+.management .button {float:left;margin-right:10px;cursor:pointer;padding: 0 10px;}
+.timer {width: 300px; height:70px;font: bold 50px sans-serif;color: #000000;text-align:center;line-height:70px;display:none;}
+.showHideManagement {float:left;}
+
+.h8 {height:8px;}
+#audioAlarm{display:none;}

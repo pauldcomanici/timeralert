@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+		<meta charset="utf-8" />
+		<meta name="title" content="Timer alert, countown and get alert when time expires" /> 
+		<meta name="language" content="en" />
+		<title>Timer alert</title>
+		<meta name="description" content="Timer alert, countown and get alert when time expires"/>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+		<link href="css/colorpicker.css" type="text/css" rel="stylesheet" />
+		<link href="css/app.css" type="text/css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<audio id="audioAlarm" controls preload="auto" autobuffer loop>
+			<source src="media/alarm-clock-1.mp3" />
+			<source src="media/alarm-clock-1.wav" />
+			<source src="media/alarm-clock-1.wma" />
+		</audio>
+		<div class="clear"></div>
+		<div id="management" class="management">
+			<label for="time_hour">Hours</label>
+			<input id="time_hour" class="time_field" type="number" step="1" min="0" max="24" value="0" />
+			<label for="time_minutes">Minutes</label>
+			<input id="time_minutes" class="time_field" type="number" step="1" min="0" max="59" value="0" />
+			<label for="time_seconds">Seconds</label>
+			<input id="time_seconds" class="time_field" type="number" step="1" min="0" max="59" value="5" />
+			<input id="start_timer" class="button" type="button" value="Start" />
+			<input id="stop_timer" class="button" type="button" value="Stop" />
+			<div class="clear"></div>
+			<div class="spacer h8"></div>
+			<div class="clear"></div>
+			<label for="textColor" class="pickColorLabel">text color:</label>
+			<div id="textColor" class="pickColor"><div></div></div>
+			<label for="backgroundColor" class="pickColorLabel">background color:</label>
+			<div id="backgroundColor" class="pickColor pickBackgroundColor"><div></div></div>
+			<input id="switchColors" class="switchColors" type="button" value="Switch colors" />
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<input id="showHideManagement" class="showHideManagement" type="button" value="Hide settings" />
+		<input id="displayClock" class="showHideManagement" type="button" value="Show clock" />
+		<div class="clear"></div>
+		<div id="clock" class="clock"></div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/colorpicker.js"></script>
+		<script type="text/javascript" src="js/timeralert.js"></script>
+		<script type="text/javascript" src="js/timeralertdom.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23591338-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+	</body>
+</html>
