@@ -18,6 +18,9 @@
 			<source src="media/alarm-clock-1.wma" />
 		</audio>
 		<div class="clear"></div>
+		<div id="cache"></div>
+		<div id="offline"></div>
+		<div class="clear"></div>
 		<div id="management" class="management">
 			<label for="time_hour">Hours</label>
 			<input id="time_hour" class="time_field" type="number" step="1" min="0" max="24" value="0" />
@@ -42,8 +45,9 @@
 		<input id="displayClock" class="showHideManagement" type="button" value="Show clock" />
 		<div class="clear"></div>
 		<div id="clock" class="clock"></div>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/cache.js"></script>
 		<script type="text/javascript" src="js/colorpicker.js"></script>
 		<script type="text/javascript" src="js/timeralert.js"></script>
 		<script type="text/javascript" src="js/timeralertdom.js"></script>

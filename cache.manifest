@@ -1,16 +1,18 @@
 CACHE MANIFEST
-# rev 1
+# rev 2
 CACHE:
 # CSS
 css/app.css
 css/colorpicker.css
+http://fonts.googleapis.com/css?family=Droid+Sans+Mono
 # JS
 js/app.js
 js/colorpicker.js
 js/timeralert.js
 js/timeralertdom.js
-https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js
-https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js
+js/cache.js
+http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js
 # MEDIA
 media/alarm-clock-1.mp3
 media/alarm-clock-1.wav
